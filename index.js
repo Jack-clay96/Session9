@@ -1,6 +1,6 @@
 var watchID;
 var accelerometerOptions = { frequency: 2000 };  // Update every 2 seconds
-accelerometerOptions.frequency = 3000; //changed my mind - now 3 seconds
+accelerometerOptions.frequency = 100; //changed my mind - now 3 seconds
 
 
 //when the page is created...
@@ -20,8 +20,8 @@ $(document).on("pagecreate", "#page1", function () {
 		
 		//the value from the slider is text - it needs to be turned into an integer
 		var freq = parseInt($(this).val());
-		
-		updateFreq(freq); //Calling updatefreq method
+        
+		//updateFreq(freq); //Calling updatefreq method
 	
 	});
 	
@@ -57,8 +57,9 @@ function accelerometerError() {
 
 function updateFreq(freq) {
 	//do something to update freq. here.
+    stopSensor();
     accelerometerOptions.frequency = freq;
-    console.output( accelerometerOptions.frequency);
+    startSensor();
 }
 
 
