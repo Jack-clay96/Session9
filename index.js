@@ -21,7 +21,7 @@ $(document).on("pagecreate", "#page1", function () {
 		//the value from the slider is text - it needs to be turned into an integer
 		var freq = parseInt($(this).val());
         
-		//updateFreq(freq); //Calling updatefreq method
+		updateFreq(freq); //Calling updatefreq method
 	
 	});
 	
