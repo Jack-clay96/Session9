@@ -57,7 +57,7 @@ function accelerometerError() {
 
 function updateFreq(freq) {
 	//do something to update freq. here.
-    stopSensor();
+    stopSensor(); //Need to stop watchid so I can enter a new value it can start with again
     accelerometerOptions.frequency = freq;
     startSensor();
 }
